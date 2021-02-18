@@ -1,14 +1,24 @@
-{%extends 'base.html'%}
+
+{% extends 'base.html' %}
+{%load staticfiles%}
+
+{% block Style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/products.css' %}">
+{% endblock %}
+
 
 {%block Content%}
-
-{%for sub_list in obj%}
-		<b><ul>{{sub_list.title}}  {{sub_list.price}}</ul></b>
-		<ul>{{sub_list.description}}</ul>
-{%endfor%}
 <form action="form/" method="GET">
 	<input type="submit" name="Add new">
 </form>
+<h1>Product List</h1>
+{%for sub_list in obj%}
+		<b ><ul class= Title>{{sub_list.title}}  {{sub_list.price}}</ul></b>
+
+		<ul >{{sub_list.description}}</ul>
+
+{%endfor%}
+
 
 
 {%endblock%}
