@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prueba</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href= "{% static 'css/Style.css' %}">
+	{%block Style%}
+	{%endblock%}
+</head>
+<body>
+	<nav>
+		<ul>
+			<li class= nav> Home</li>
+			<li class= nav> Add Product</li>
+		</ul>
+	</nav>
+	{%block Content%}
+	{%endblock%}
+</body>
+</html>

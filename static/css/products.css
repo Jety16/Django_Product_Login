@@ -1,0 +1,26 @@
+h1	{
+	color: white;
+}
+.Title {	
+	padding:.5em;
+	background-color:#99999c;
+	color:#101313;
+	overflow: visible;
+	margin:.5em;
+	display:flex;
+	justify-content: center;
+	outline: thick double ;
+	box-shadow:5px 15px 4px #202020;
+	font-size:1.3em;
+}
+
+.Title:hover {
+	background-color:#ccc8c0;
+}
+.Title:active {
+	background-color: #F9EFEF;
+}
+form{
+	display:flex;
+	justify-content:flex-end;
+}
