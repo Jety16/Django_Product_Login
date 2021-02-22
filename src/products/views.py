@@ -17,22 +17,6 @@ def product_detail_view (request, *args, **kwargs):
 	}
 	return render (request, 'products.html', product_context)
 
-#def  product_create_view(request):
-#	my_form = RawProductForm()
-#	if request.method=="POST":
-#		my_form=RawProductForm(request.POST)
-	#	if my_form.is_valid():
-	#		Product.objects.create(**my_form.cleaned_data)
-		#	return HttpResponseRedirect ('../congrats')
-
-	#	else:
-	#		print(my_form.errors)
-	#form_context={
-	#	"form":my_form
-	#}
-#
-#	return render(request, 'product/forms.html', form_context)
-
 def product_create_view(request):
 	form = ProductForm(request.POST or None)
 	if form.is_valid():
